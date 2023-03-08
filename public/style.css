@@ -207,3 +207,17 @@ form div {
   z-index: 1;
 }
 /* -----------------------------Cart Styles End----------------------------*/
+/* -----------------------------Login Styles----------------------------*/
+.loginPage{
+  margin: 0 200px;
+}
+/* .loginBox{
+  
+} */
+form div {
+  display: block;
+}
+.loginMarginFix{
+  position: relative;
+  left: 15px;
+}
