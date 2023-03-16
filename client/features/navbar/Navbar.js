@@ -44,7 +44,7 @@ const Navbar = () => {
 		<div>
 			<div className="navbar">
 				<MDBCol md="2">
-					<Link to="/home">
+					<Link to="/featured">
 						<img src="/logo-nobckgrnd.png" className="logo" />
 					</Link>
 				</MDBCol>
