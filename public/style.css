@@ -233,10 +233,17 @@ form div {
   .loginForm{
     margin: 25px 500px;
   }
+  .signUpBox{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
 }
 
 @media screen and (max-width: 1300px){
   .loginForm{
     margin: 0;
   }
+  
 }
+
