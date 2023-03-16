@@ -8,7 +8,6 @@ import Button from "react-bootstrap/Button";
 import { addSearchQuery } from "../../app/reducers/searchSlice";
 // import { selectUser } from "../../app/reducers/userSlice";
 import { v4 as uuidv4 } from "uuid";
-
 const Navbar = () => {
 	const [status, setStatus] = useState(false);
 	const [searchInput, setSearchInput] = useState("");
