@@ -221,7 +221,7 @@ const AllProducts = () => {
           <option value="Mac">Mac</option>
         </select>
       </div>
-      <div className='productContainer'>
+      <div className="productContainer">
         {(filtered[0] && search !== '') || category !== ''
           ? filtered?.map((product) =>
               product.name.toLowerCase().includes(search) ||
@@ -475,6 +475,7 @@ const AllProducts = () => {
                 </button>
               </div>
             ))}
+        {products.length == 0 ? <div className="emptySpace"> </div> : null}
       </div>
     </div>
   );
