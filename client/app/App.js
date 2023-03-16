@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../features/footer/Footer";
 
 import Navbar from "../features/navbar/Navbar";
-import NewNav from "../features/navbar/NewNav";
+import NavbarRedesign from "../features/navbar/NavbarRedesign";
 import SpecializedNavbar from "../features/specializedNavbar/SpecializedNavbar";
 import AppRoutes from "./AppRoutes";
 

@@ -8,7 +8,6 @@ import Button from "react-bootstrap/Button";
 import { addSearchQuery } from "../../app/reducers/searchSlice";
 // import { selectUser } from "../../app/reducers/userSlice";
 import { v4 as uuidv4 } from "uuid";
-
 const Navbar = () => {
 	const [status, setStatus] = useState(false);
 	const [searchInput, setSearchInput] = useState("");
@@ -45,7 +44,7 @@ const Navbar = () => {
 		<div>
 			<div className="navbar">
 				<MDBCol md="2">
-					<Link to="/home">
+					<Link to="/featured">
 						<img src="/logo-nobckgrnd.png" className="logo" />
 					</Link>
 				</MDBCol>

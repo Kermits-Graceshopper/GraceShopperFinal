@@ -77,7 +77,6 @@ form div {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items:center;
   justify-content:center;
 }
 .checkoutSidebar{
@@ -164,11 +163,9 @@ form div {
 }
 .allProductsHeader{
   position: absolute;
-  top: 200px;
   text-align: center;
-}
-.productContainerAllProductsEdit{
-  margin-top: 100px;
+  position: relative;
+  top: 10px;
 }
 /* -----------------------------Cart Styles ---------------------------------*/
 .cartSummary{
@@ -179,6 +176,7 @@ form div {
   padding: 50px;
   display: flex;
   flex-direction: column;
+  /* margin-bottom: 300px; */
 }
 .cartItem img {
   height: 100px;
@@ -205,18 +203,40 @@ form div {
   width: 50vw;
   z-index: 1;
 }
+.cartBody{
+  position: relative;
+  bottom: 0;
+}
+.emptySpace{
+  height: 500px;
+}
 /* -----------------------------Cart Styles End----------------------------*/
 /* -----------------------------Login Styles----------------------------*/
-.loginPage{
-  margin: 0 200px;
-}
-/* .loginBox{
-  
-} */
+
 form div {
   display: block;
 }
 .loginMarginFix{
   position: relative;
   left: 15px;
+}
+/* .loginForm{
+  margin: 25px 500px;
+} */
+
+.loginPage{
+  margin-bottom: 300px;
+  margin-top: 200px;
+}
+
+@media screen and (min-width: 600px){
+  .loginForm{
+    margin: 25px 500px;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .loginForm{
+    margin: 0;
+  }
 }

@@ -103,8 +103,8 @@ const Login = () => {
             </p>
           </div>
           <h1 className="header">Log In</h1>
-          <div className="loginBox">
-            <form onSubmit={handleSubmit}>
+          <div >
+            <form onSubmit={handleSubmit} className='loginForm'>
               <div class="form-group">
                 <label htmlFor="email">Email</label>
                 <input
@@ -116,7 +116,7 @@ const Login = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email..."
                   required
-                  className="form-control w-125"
+                  className="form-control"
                 />
               </div>
               <div className="form-group">
