@@ -112,69 +112,74 @@ const ShoppingCart = () => {
 	}, []);
 
 	return (
-		<div className="cartContainer">
-			{deletionSuccess ? (
-				<h5 style={{ color: "green" }}>Item deleted!</h5>
-			) : null}
+    <div className="cartContainer">
+      {deletionSuccess ? (
+        <h5 style={{ color: 'green' }}>Item deleted!</h5>
+      ) : null}
 			<h1 className="header"> Cart</h1>
-			<div>
-				{cart[0] ? (
-					cart.map((item) =>
-						products
-							? products.map((product) =>
-									item.productId === product.id ? (
-										<div className="cartItem">
-											<h3>{product.name}</h3>
-											<img src={product.imageUrl} />
-											<h5>${product.price}</h5>
-											<h5>Quantity: {item.quantity}</h5>
-											<p className="priceCalc">
-												{
-													(runningTotal =
-														runningTotal + product.price * item.quantity)
-												}
-											</p>
-											<button
-												type="button"
-												className="btn btn-danger removeCartItem"
-												onClick={() => {
-													deleteCartItem(item.productId);
-												}}>
-												Remove Item
-											</button>
-										</div>
-									) : null
-							  )
-							: null
-					)
-				) : (
-					<h2>{pageMessage}</h2>
-				)}
-			</div>
+			{cart.length == 0 ? <div className="emptySpace"> </div> : null}
+      <div className="cartBody">
+        <div>
+          {cart.length ? (
+            cart.map((item) =>
+              products
+                ? products.map((product) =>
+                    item.productId === product.id ? (
+                      <div className="cartItem">
+                        <h3>{product.name}</h3>
+                        <img src={product.imageUrl} />
+                        <h5>${product.price}</h5>
+                        <h5>Quantity: {item.quantity}</h5>
+                        <p className="priceCalc">
+                          {
+                            (runningTotal =
+                              runningTotal + product.price * item.quantity)
+                          }
+                        </p>
+                        <button
+                          type="button"
+                          className="btn btn-danger removeCartItem"
+                          onClick={() => {
+                            deleteCartItem(item.productId);
+                          }}
+                        >
+                          Remove Item
+                        </button>
+                      </div>
+                    ) : null
+                  )
+                : <div className="emptySpace"> </div>
+            )
+          ) : (
+            <h2>{pageMessage}</h2>
+          )}
+        </div>
 
-			<div className="cartBody">
-				<div className="cartSummary">
-					<h2>
-						Order Summary <br />
-					</h2>
-					<hr />
-					<h2>Subtotal: ${runningTotal.toFixed(2)}</h2>
-				</div>
-				<hr />
-				{cart[0] ? (
-					<Button
-						className="coButton"
-						variant="primary"
-						size="lg"
-						onClick={handleCheckout}>
-						Proceed to checkout
-					</Button>
-				) : (
-					<></>
-				)}
-			</div>
-		</div>
-	);
+        <div>
+          <div className="cartSummary">
+            <h2>
+              Order Summary <br />
+            </h2>
+            <hr />
+            <h2>Subtotal: ${runningTotal.toFixed(2)}</h2>
+          </div>
+          <hr />
+          {cart[0] ? (
+            <Button
+              className="coButton"
+              variant="primary"
+              size="lg"
+              onClick={handleCheckout}
+            >
+              Proceed to checkout
+            </Button>
+          ) : (
+            <></>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ShoppingCart;
